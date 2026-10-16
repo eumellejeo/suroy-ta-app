@@ -15,11 +15,10 @@ List<RouteResult> processRoutesInBackground(Map<String, dynamic> data) {
 
   // ==========================================
   // THE COST FUNCTION DIALS
-  // Tweak these to change how "lazy" the algorithm is!
   // ==========================================
   const double walkMultiplier = 15.0; // 1m of walking adds 15 penalty points
   const double rideMultiplier = 1.0;  // 1m of riding adds 1 penalty point
-  const double minRideDistance = 200.0; // Ignore rides shorter than 200m
+  const double minRideDistance = 200.0;
 
   allRouteCoordinates.forEach((routeName, coordinates) {
     if (coordinates.isEmpty) return; 
